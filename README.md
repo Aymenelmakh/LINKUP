@@ -61,3 +61,21 @@ LINKUP/
 ├─ .gitignore
 └─ README.md
 ```
+## ⚡ Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/LinkUp.git
+cd LinkUp
+```
+2. **Install dependencies**
+```bash
+npm install
+```
+  This installs Axios and any other dependencies listed in package.json
+
+## 🚀 Quick Start
+
+1. **Serve the project**
+Use VS Code Live Server or any static server to open templates/home.html in your browser.
