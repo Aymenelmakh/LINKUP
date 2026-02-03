@@ -96,3 +96,14 @@ npm install
 ## 📦 Dependencies
   - Axios — HTTP client for REST API requests
   - Bootstrap — CSS framework for responsive design
+
+## 📜 License
+
+This project is open-source and free to use for educational purposes.
+
+## 👤 Author
+
+Aymen Elmakh
+
+GitHub: https://github.com/Aymenelmakh
+Email: aymenelmakhlouk@gmail.com
