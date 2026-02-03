@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="../packages/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/profile_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        const token = localStorage.getItem("token");
+        if (!token)
+        {
+            window.location = './home.html';
+            alert('you have to login')
+        }
+    </script>
+</head>
+<body style="padding-top: 100px;">
+     <!-- Alert -->
+        <div id="alert-container" style="width:50%;z-index: 5;position: fixed;bottom: 10px;right:10px;"></div>
+    <!-- Alert -->
+
+     <!-- Loader -->
+    <div id="loader" class="loader hidden"></div>
+    <!-- Loader -->
+
+    <!-- NavBar -->
+    <div class="container fixed-top">
+        <div class="d-flex justify-content-center">
+            <div class="col-9">
+                <nav class="navbar navbar-expand-lg bg-light pt-4 rounded shadow">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">LinkUp</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="toProfile()">Profile</a>
+                                </li>
+                            </ul>
+                             <div class="d">
+                                 <button id="btn1" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+                                 <button id="btn2" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div> 
+    <!-- NavBar -->
+
+        <!-- add button -->
+     <div class="scroll-add-buttons">
+        <div class="up">
+            <i id="up" class="fas fa-arrow-up"></i>
+        </div>
+     </div>
+    <!-- add buton -->
+
+    <div id="profile-card">
+        <!-- <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="col-9">
+                    <div class="profile bg-light pb-2 shadow">
+                        <div class="profile-top">
+                            <div class="profile-img-box">
+                                <img id="profil-pic" src="https://cdn-icons-png.flaticon.com/128/847/847969.png">
+                            </div>
+                        </div>
+                        <div class="profile-title">
+                            <p id="tit">Username</p>
+                            <p id="personnel-email">email</p>
+                        </div>
+                        <div class="profile-buttons">
+                            <button class="profile-btn" type="button">Subscribe</button>
+                            <button class="profile-btn" type="button">Message</button>
+                        </div>
+                        <div class="reacts">
+                            <ul class="profile-bottom">
+                                <li>
+                                     <i class="fa-solid fa-address-book"></i>
+                                     <p id="nb-posts">60k</p>
+                                </li>
+                                <li class="sep">|</li>
+                                <li>
+                                      <i class="fa-regular fa-comment"></i>
+                                      <p id="nb-comments">20k</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-9">
+                <h4 id="user-name"></h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="posts">
+        <!-- <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="col-9">
+                    <h4>yarhmm's Post</h4>
+                    <div class="post bg-light pb-2 shadow">
+                        <div class="top px-2 py-1">
+                            <div class="cont">
+                                <div class="pic">
+                                    <img src="../images/user-200x300.webp">
+                                </div>
+                                <div class="p-name d-flex justify-content-center align-items-center">
+                                    <p>@yarhmm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-post">
+                            <img class="rounded" src="https://tarmeezacademy.com/images/users/fLuNve0p5nStBn8.jpg">
+                            <p id="time">2 min ago</p>
+                            <p id="title">Special title treatment</p>
+                            <p id="content">With supporting text below as a nutral lead-in to additional content</p>
+                        </div>
+                        <div class="comment-sec">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <button id="comment" type="button">
+                                    <i class="fa-regular fa-message"></i>
+                                </button>
+                                <p style="margin-bottom: 0px;">(3) Comments</p>
+                            </div>
+                            <div class="tags d-flex justify-content-center align-items-center">
+                                <p style="margin-bottom: 0px;">Anime</p>
+                                <p style="margin-bottom: 0px;">One piece</p>
+                                <p style="margin-bottom: 0px;">gogo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Title</label>
+                            <input type="text" class="form-control" id="new-title">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">body</label>
+                            <textarea id="new-body" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="Update-Post" type="button" class="btn btn-primary" onclick="UpdatePost()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Libs -->
+    <script src="../packages/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../packages/node_modules/axios/dist/axios.min.js"></script>
+    <script src="../scripts/Alert.js"></script>
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/createTgas.js"></script>
+    <script src="../scripts/reload.js"></script>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/profile.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/comments.js"></script>
+    <script src="../scripts/open_profile.js"></script>
+</body>
+</html>
