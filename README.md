@@ -81,4 +81,4 @@ npm install
 
   1. **Serve the project**
 
-    Use VS Code Live Server or any static server to open templates/home.html in your browser.
+  Use VS Code Live Server or any static server to open templates/home.html in your browser.
