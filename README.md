@@ -79,6 +79,20 @@ npm install
 
 ## 🚀 Quick Start
 
-  1. **Serve the project**
+1. **Serve the project**
 
   Use VS Code Live Server or any static server to open templates/home.html in your browser.
+
+2. **Ensure API backend is running**
+   LinkUp interacts with a RESTful API using Axios for CRUD operations.
+
+3. **Interact with the app**
+   - Register/login
+   - Create, update, delete posts
+   - Comment on posts
+   - View profiles
+   - Toggle dark mode
+
+## 📦 Dependencies
+  - Axios — HTTP client for REST API requests
+  - Bootstrap — CSS framework for responsive design
