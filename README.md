@@ -1,6 +1,8 @@
 
 # LinkUp 🚀
+
   LinkUp is a **front-end social media web application** that allows users to authenticate, view profiles, create and manage   posts, and interact through comments. It consumes a **RESTful API** and supports user-specific actions like updating and     deleting posts. The app features loaders for async requests and **dark mode** for a better user experience.
+  
 ---
 
 ## 🌟 Features
