@@ -1,0 +1,328 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* default (light) */
+:root {
+    --bg: #e4dddd;
+    --text: #111;
+    --card: #ffffff;
+}
+
+/* dark mode */
+html.dark {
+    --bg: #070b1d;
+    --text: #eee;
+    --card: #1e1e1e;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+body{
+    background: var(--bg);
+    /* color: var(--text); */
+    min-height: 100vh;
+    position: relative;
+}
+.navbar-brand{
+    font-family: "Bungee",sans-serif;
+}
+.list{
+    list-style: none;
+    display: flex;
+}
+.list li a{
+    color:black
+}
+.d{
+    display: flex;
+    justify-content: flex-end;
+    flex:1;
+    /* width:100%; */
+    gap:10px;
+}
+.container{
+    margin-bottom: 30px;
+}
+.pic{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pic img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border:solid 2px #fff;
+}
+.top{
+    background-color: #ebdada93;
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+}
+.cont{
+    display: flex;
+    gap: 5px;
+}
+.menu-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+}
+.c img{
+    border:solid 2px #fff;
+}
+.c{
+    display: flex;
+    gap: 5px;
+}
+.p-name p{
+    text-decoration: none;
+    color:black;
+    font-weight: bolder;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.image-post{
+    width: 100%;
+    padding: 10px;
+    cursor: default;
+}
+.image-post img{
+    width: 100%;
+    height: 100%;
+}
+.image-post #time{
+    font-size: 12px;
+    color: grey;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+#title{
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+#content{
+    font-size: 13px;
+    margin-left: 5px;
+    border-bottom: solid 1px grey;
+    margin-bottom: 0;
+}
+.comment-sec{
+    display: flex;
+    gap: 50px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.icon button{
+    border: none;
+    background-color: transparent;
+}
+.tags{
+    gap:10px;
+}
+.tags p{
+    background-color: grey;
+    padding: 5px;
+    border-radius: 8px;
+    cursor:pointer;
+}
+.icon{
+    gap:3px;
+}
+#add{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    width:40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(126, 126, 240);
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1;
+    display: none;
+}
+#add span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add:hover{
+    opacity: 0.7;
+}
+.up{
+    width: 40px;
+    background-color: grey;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: none;
+}
+.up:hover{
+    opacity: 0.7;
+}
+.comments-section{
+    border-top: solid 1px grey;
+    margin:10px;
+    padding: 10px;
+}
+
+.msg{
+    background-color: #ebdada93;
+    display: flex;
+    align-items: center;
+    height:40px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.write-comment{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.send-btn{
+    width:30px;
+    height:30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.send-btn:hover{
+    opacity: 0.7;
+}
+.comment-info{
+    background-color: rgba(212, 206, 206, 0.664);
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+.username:hover{
+    text-decoration: underline;
+}
+.post{
+    cursor: pointer;
+}
+.display-menu{
+    /* height: 100px; */
+    background-color:#fcf3f3fa;
+    border-radius: 10px;
+    position: absolute;
+    right:15px;
+    top:70px;
+    display: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.remove-post, .Update-post{
+    background-color: rgb(214, 212, 212);
+    height: fit-content;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    height: 30px;
+    padding: 5px 10px;
+    width: 100px;
+}
+.remove-post{
+    margin-bottom: 5px;
+}
+.remove-post i{
+    color:rgba(173, 11, 11, 0.801);
+}
+
+.remove-post p, .Update-post p{
+    margin-bottom: 0;
+}
+.remove-post:hover, .Update-post:hover{
+    opacity: 0.7;
+}
+
+.toggle{
+    width:33px;
+    height:20px;
+    background-color: transparent;
+    border:solid 3.5px rgb(32, 27, 37);
+    position: fixed;
+    top:20px;
+    right:30px;
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    z-index: 9999;
+}
+.middle{
+    width:10px;
+    height:10px;
+    background-color: rgb(32, 27, 37);
+    border-radius: 50%;
+}
+html.dark .toggle {
+    justify-content: flex-end;
+    border:solid 3.5px #fff;
+}
+html.dark .middle {
+    background: #fff;
+}
+html.dark .up{
+    background-color: #fff;
+}
+html.dark #user-name{
+    color:#eee;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 4px solid #ccc;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

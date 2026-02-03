@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+}
+.profile{
+    background-color: #fff;
+    border-radius: 15px;
+    padding-bottom:10px ;
+}
+.profile-top{
+    width:100%;
+    height: 120px;
+    background-color: #4070f4;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+.profile-img-box{
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: solid #4070f4 ;
+    overflow: hidden;
+    position: absolute;
+    bottom:-17px;
+    /* box-shadow: 0px 2px #4070f4; */
+}
+.profile-img-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid #fff;
+}
+.profile-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-family: "Ubuntu",sans-serif;
+    margin-bottom:10px;
+}
+.profile-title #tit{
+    font-weight: bold;
+    font-size: 16px;
+}
+.profile-title p{
+    font-size: 12px;
+}
+
+.profile-buttons{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.profile-btn{
+    height: 30px;
+    width:100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #1877F2;
+    color:#fff;
+    transition: all .3s ease;
+    font-family: "Ubuntu",sans-serif;
+}
+.profile-btn:hover{
+    opacity:0.7;
+}
+.reacts{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.profile-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.profile-bottom li{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.reacts i{
+    font-size: 16px;
+    color: rgb(71, 66, 66);
+}
+.reacts li p{
+    font-family:"Ubuntu",sans-serif ;
+    font-size: 14px;
+    color:rgb(71, 66, 66);
+} 
+.profile-bottom li p{
+    margin-bottom: 0;
+}
+.profile-bottom .sep{
+     color: #797676;
+     font-weight: bold;
+}
